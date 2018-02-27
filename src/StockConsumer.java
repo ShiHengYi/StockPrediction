@@ -71,9 +71,9 @@ public class StockConsumer {
             if(count > 0){
                 meanMeanHigh = sumMeanHigh / count;
                 meanMeanLow = sumMeanLow / count;
-                meanMeanOpen = sumMeanHigh / count;
-                meanMeanClose = sumMeanLow / count;
-                meanMeanVolume = sumMeanHigh / count;                          
+                meanMeanOpen = sumMeanOpen / count;
+                meanMeanClose = sumMeanClose / count;
+                meanMeanVolume = sumMeanVolume / count;                          
                 currentAggregatedStatistic =  meanMeanVolume * ((meanMeanHigh + meanMeanLow + meanMeanOpen + meanMeanClose) / 4.0);
                 if(previousAggregatedStatistic != 0) {
                 	double delta = (currentAggregatedStatistic - previousAggregatedStatistic) / ( 100 * meanMeanVolume);             
